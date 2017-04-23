@@ -1,2 +1,2 @@
-# scpEnvironment
-dev environment for sparta course portal
+# spartagramEnvironment
+dev and test environment for SpartaGram
