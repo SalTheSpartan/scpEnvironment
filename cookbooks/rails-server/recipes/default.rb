@@ -30,7 +30,7 @@ template '/etc/nginx/sites-available/default' do
   source 'nginx.default.erb'
   notifies :reload, "service[nginx]"
 end
-
+#test
 execute 'Install bundler' do
   command 'sudo apt install ruby-bundler -y'
 end
