@@ -82,6 +82,8 @@ echo "client_encoding = utf8" >> "$PG_CONF"
 service postgresql restart
 
 cat << EOF | su - postgres -c psql
+# add password to postgres user
+
 -- Create the database user:
 CREATE USER $APP_DB_USER WITH PASSWORD '$APP_DB_PASS';
 
