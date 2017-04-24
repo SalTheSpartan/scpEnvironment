@@ -14,8 +14,8 @@ include_recipe 'ruby_build'
 include_recipe 'ruby_rbenv::system'
 include_recipe 'ruby_rbenv::user'
 
-# rbenv_ruby "2.4.0"
-# rbenv_global "2.4.0"
+rbenv_ruby "2.4.0"
+rbenv_global "2.4.0"
 
 # include_recipe "postgresql::client"
 # include_recipe 'postgresql::server'
