@@ -18,5 +18,30 @@ describe 'rails-server::default' do
     it 'converges successfully' do
       expect { chef_run }.to_not raise_error
     end
+    it "should install nginx" do
+      expect(chef_run).to install_package 'nginx'
+    end
+    it "enables the nginx service" do
+      expect(chef_run).to enable_service 'nginx'
+    end
+    it "starts the nginx service" do
+      expect(chef_run).to start_service 'nginx'
+    end
+    it "creates nginx.default" do
+      expect(chef_run).to create_template('/etc/nginx/sites-available/default')
+    end
+    it "restarts nginx" do
+      template = chef_run.template('/etc/nginx/sites-available/default')
+      expect(template).to notify('service[nginx]').to(:reload)
+    end
+    it "checks if ruby is installed" do
+      expect(chef_run).to include_recipe 'ruby_build'
+    end
+    it "checks if ruby is installed via rbenv" do
+      expect(chef_run).to include_recipe 'ruby_rbenv'
+    end
+    it "checks if git is installed" do
+      expect(chef_run).to include_recipe 'git'
+    end
   end
 end
