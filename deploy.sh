@@ -2,7 +2,7 @@
 
 cd ~/spartagramEnvironment
 git pull
-berks vendor cookbooks
+sudo berks vendor cookbooks
 sudo chef-client --local-mode --runlist 'recipe[rails-server]'
 
 
