@@ -11,5 +11,5 @@ git pull
 rbenv rehash
 gem install bundler
 rbenv rehash
-
+bundle exec rake db:migrate
 rails s
