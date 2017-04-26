@@ -1,0 +1,49 @@
+{
+  "name": "rails-server",
+  "description": "Installs/Configures rails-server",
+  "long_description": "Installs/Configures rails-server",
+  "maintainer": "The Authors",
+  "maintainer_email": "you@example.com",
+  "license": "All Rights Reserved",
+  "platforms": {
+  },
+  "dependencies": {
+    "nodejs": "~> 3.0.0",
+    "build-essential": "~> 8.0.1",
+    "system": "~> 0.11.2",
+    "git": "~> 6.0.0",
+    "ruby_build": "~> 1.1.0",
+    "ruby_rbenv": "~> 1.2.0"
+  },
+  "recommendations": {
+  },
+  "suggestions": {
+  },
+  "conflicting": {
+  },
+  "providing": {
+  },
+  "replacing": {
+  },
+  "attributes": {
+  },
+  "groupings": {
+  },
+  "recipes": {
+  },
+  "version": "0.1.0",
+  "source_url": "",
+  "issues_url": "",
+  "privacy": false,
+  "chef_versions": [
+    [
+      ">= 12.1"
+    ]
+  ],
+  "ohai_versions": [
+
+  ],
+  "gems": [
+
+  ]
+}

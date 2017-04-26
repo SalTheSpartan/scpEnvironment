@@ -46,3 +46,11 @@ end
 execute 'Install hidden dependencies' do
   command 'sudo apt-get install libpq-dev -y'
 end
+
+execute 'Install bundler gem' do
+  command 'gem insatll bundler'
+end
+
+execute 'rbenv rehash' do
+  command 'rbenv rehash'
+end
