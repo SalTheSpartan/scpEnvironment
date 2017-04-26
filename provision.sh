@@ -3,6 +3,7 @@
 # Edit the following to change the name of the database user that will be created:
 APP_DB_USER=ubuntu
 APP_DB_PASS=dbpass
+PG_PASS=xyz
 
 # Edit the following to change the name of the database that is created (defaults to the user name)
 APP_DB_NAME=$APP_DB_USER
@@ -83,7 +84,8 @@ service postgresql restart
 
 cat << EOF | su - postgres -c psql
 # add password to postgres user
-
+-- Create password postgres user
+ALTER USER postgres WITH PASSWORD '$PG_PASS';
 -- Create the database user:
 CREATE USER $APP_DB_USER WITH PASSWORD '$APP_DB_PASS';
 
