@@ -48,7 +48,7 @@ execute 'Install hidden dependencies' do
 end
 
 execute 'Install bundler gem' do
-  command 'gem insatll bundler'
+  command 'gem install bundler'
 end
 
 execute 'rbenv rehash' do
