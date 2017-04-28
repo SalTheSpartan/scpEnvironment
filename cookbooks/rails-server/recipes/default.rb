@@ -14,6 +14,8 @@ include_recipe 'ruby_build'
 include_recipe 'ruby_rbenv::system'
 include_recipe 'ruby_rbenv::user'
 
+nodejs_npm 'pm2'
+
 # rbenv_ruby "2.4.0"
 # rbenv_global "2.4.0"
 
