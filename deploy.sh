@@ -11,4 +11,4 @@ cd ~/SpartaGram
 git pull
 bundle
 bundle exec rake db:migrate
-rails s
+rails s -d &
