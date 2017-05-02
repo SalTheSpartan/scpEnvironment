@@ -14,7 +14,7 @@ include_recipe 'ruby_build'
 include_recipe 'ruby_rbenv::system'
 include_recipe 'ruby_rbenv::user'
 
-nodejs_npm 'pm2'
+
 
 # rbenv_ruby "2.4.0"
 # rbenv_global "2.4.0"
@@ -32,6 +32,11 @@ template '/etc/nginx/sites-available/default' do
   source 'nginx.default.erb'
   notifies :reload, "service[nginx]"
 end
+
+execute "install NPM package pm2 globally" do
+    command "npm install -g pm2"
+end
+
 #testh
 execute 'Install bundler' do
   command 'sudo apt install ruby-bundler -y'
